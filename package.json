@@ -1,0 +1,17 @@
+{
+  "name": "m4-banco-api-tests",
+  "version": "1.0.0",
+  "description": "Julio Test",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha ./test/**/*.test.js --timeout=2000"
+  },
+  "author": "Vini Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1",
+    "supertest": "^7.1.4"
+  }
+}
