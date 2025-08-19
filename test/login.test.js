@@ -1,10 +1,12 @@
 import request from 'supertest';
 import { expect } from 'chai';
+import dotenv from 'dotenv';
+dotenv.config();
 
 describe('login', () => {
     describe('POST /login', () => {
         it('Deve retornar 200 com um token em uma string quando ', async () => {
-            const resposta = await request('http://localhost:3000')
+            const resposta = await request(process.env.BASE_URL)
                 .post('/login')
                 .set('Content-Type', 'application/json')
                 .send({
