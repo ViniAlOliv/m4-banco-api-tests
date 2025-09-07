@@ -1,6 +1,6 @@
-const request = require('supertest')
+import request from 'supertest'
 
-const obterToken = async(usuario, senha) => {
+export const obterToken = async(usuario, senha) => {
     const respostaLogin = await request(process.env.BASE_URL)
         .post('/login')
         .set('Content-Type', 'application/json')
@@ -10,5 +10,3 @@ const obterToken = async(usuario, senha) => {
         })
     return respostaLogin.body.token
 }
-
-module.exports = { obterToken }
